@@ -40,6 +40,11 @@ function loadHomePage() {
   /**
    * footer > p
    */
+  const footer = createElement('footer');
+  footer.classList.add('footer');
+  const para = createElement('p');
+  para.textContent = 'Copyright © 2023 Robinee';
+  footer.append(para);
 }
 
 export { loadHomePage };
