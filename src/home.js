@@ -19,13 +19,22 @@ function loadHomePage() {
   });
   ul.append(...navItems);
   nav.append(ul);
-  console.log(nav);
 
   //2.render header
   /**
    * structure of header
    * header > div.container> h1 + p
    */
+  const header = createElement('header');
+  const container = createElement('div');
+  container.classList.add('container');
+  container.innerHTML = `<h1>Restaurant Page</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+    voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem
+    ducimus nulla.
+  </p>`;
+  header.append(container);
 
   //3.render footer
   /**
