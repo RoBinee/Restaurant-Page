@@ -3,9 +3,8 @@ function createElement(type, className, text) {
 
   if (className || text) {
     //if there is a need to set class or text
-    className
-      ? newElement.classList.add(className)
-      : (newElement.textContent = text);
+    if (className) newElement.classList.add(className);
+    if (text) newElement.textContent = text;
   }
 
   return newElement;
@@ -26,6 +25,7 @@ function loadHomePage() {
   });
   ul.append(...navItems);
   nav.append(ul);
+  //after append, navItems, ul variables are useless
 
   //2.render header
   /**
@@ -35,12 +35,13 @@ function loadHomePage() {
   const header = createElement('header');
   const container = createElement('div', 'container');
   container.innerHTML = `<h1>Restaurant Page</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-    voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem
-    ducimus nulla.
-  </p>`;
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+      voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem
+      ducimus nulla.
+    </p>`;
   header.append(container);
+  //after append, container variable is useless
 
   //3.render footer
   /**
@@ -49,7 +50,9 @@ function loadHomePage() {
   const footer = createElement('footer', 'footer');
   const para = createElement('p', undefined, 'Copyright © 2023 Robinee');
   footer.append(para);
-  //Create a function to create, add classLIst and set textContent
+  //after append, para variable is useless
+
+  return { nav, header, footer };
 }
 
 export { loadHomePage };
