@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 ul {
   display: flex;
@@ -45,10 +48,13 @@ header {
   justify-content: center;
 }
 .container {
-  width: 70%;
+  width: 60%;
   height: 70%;
   color: var(--white-clr);
   background: rgb(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .footer {
   background: var(--blck-clr);
@@ -57,4 +63,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Home page */
+.container > div {
+  width: 50%;
+  height: 50%;
+}
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.intro {
+  font-size: 1rem;
 }
