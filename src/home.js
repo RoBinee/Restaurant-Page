@@ -22,10 +22,7 @@ function loadHomePage() {
   let navItems = ['Home', 'Menu', 'Contact'];
 
   navItems = navItems.map((item) => {
-    const li = createElement('li');
-    li.textContent = item;
-    li.classList.add('list');
-    return li;
+    return createElement('li', 'list', item);
   });
   ul.append(...navItems);
   nav.append(ul);
@@ -36,8 +33,7 @@ function loadHomePage() {
    * header > div.container> h1 + p
    */
   const header = createElement('header');
-  const container = createElement('div');
-  container.classList.add('container');
+  const container = createElement('div', 'container');
   container.innerHTML = `<h1>Restaurant Page</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
@@ -50,10 +46,8 @@ function loadHomePage() {
   /**
    * footer > p
    */
-  const footer = createElement('footer');
-  footer.classList.add('footer');
-  const para = createElement('p');
-  para.textContent = 'Copyright © 2023 Robinee';
+  const footer = createElement('footer', 'footer');
+  const para = createElement('p', undefined, 'Copyright © 2023 Robinee');
   footer.append(para);
   //Create a function to create, add classLIst and set textContent
 }
