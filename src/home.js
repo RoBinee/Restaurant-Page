@@ -1,6 +1,16 @@
-function createElement(type) {
-  return document.createElement(type);
+function createElement(type, className, text) {
+  const newElement = document.createElement(type);
+
+  if (className || text) {
+    //if there is a need to set class or text
+    className
+      ? newElement.classList.add(className)
+      : (newElement.textContent = text);
+  }
+
+  return newElement;
 }
+
 function loadHomePage() {
   //1.render nav
   /**
@@ -45,6 +55,7 @@ function loadHomePage() {
   const para = createElement('p');
   para.textContent = 'Copyright © 2023 Robinee';
   footer.append(para);
+  //Create a function to create, add classLIst and set textContent
 }
 
 export { loadHomePage };
