@@ -10,4 +10,12 @@ module.exports = {
     filename: 'main.js', //output filename
     path: path.resolve(__dirname, 'dist'), //output location
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
