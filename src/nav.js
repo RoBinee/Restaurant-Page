@@ -10,5 +10,6 @@ export const nav = (function () {
   });
   ul.append(...navItems);
   nav.append(ul);
+
   return nav;
 })();

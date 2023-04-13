@@ -4,7 +4,8 @@ import { footer } from './footer.js';
 
 function loadHomePage() {
   const content = document.getElementById('content');
-  content.append(nav, header, footer);
+  //for making structure
+  // content.append(nav, header, footer);
 
   const container = document.querySelector('.container');
   //insert menu content into container
