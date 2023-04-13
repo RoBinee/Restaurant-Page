@@ -16,7 +16,7 @@ function loadHomePage() {
    * structure of nav
    * nav.nav > ul > li[class="link"]
    */
-  const nav = createElement('nav');
+  const nav = createElement('nav', 'nav');
   const ul = createElement('ul');
   let navItems = ['Home', 'Menu', 'Contact'];
 
