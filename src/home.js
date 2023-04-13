@@ -6,6 +6,8 @@ function loadHomePage() {
   const content = document.getElementById('content');
   content.append(nav, header, footer);
 
+  const container = document.querySelector('.container');
+  //insert menu content into container
   const lists = document.querySelectorAll('li');
   lists.forEach((list) => {
     list.addEventListener('click', (e) => {
