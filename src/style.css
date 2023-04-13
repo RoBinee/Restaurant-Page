@@ -67,9 +67,8 @@ header {
 }
 
 /* Home page */
-.container > div {
-  width: 50%;
-  height: 50%;
+#homePage {
+  width: 70%;
 }
 .title {
   font-size: 4.8rem;
