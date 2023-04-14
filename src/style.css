@@ -124,3 +124,13 @@ header {
   padding-bottom: 0.3rem;
   border-bottom: 2px solid var(--white-clr);
 }
+/* about page */
+#aboutPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+#aboutPage > h3 {
+  margin-top: 1rem;
+}
