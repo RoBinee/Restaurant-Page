@@ -3,7 +3,7 @@ import { createElement } from './createElement.js';
 export const nav = (function () {
   const nav = createElement('nav', 'nav');
   const ul = createElement('ul');
-  let navItems = ['Home', 'Menu', 'Contact'];
+  let navItems = ['Home', 'Menu', 'About'];
 
   navItems = navItems.map((item) => {
     return createElement('li', 'list', item);
