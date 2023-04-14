@@ -79,3 +79,48 @@ header {
 }
 
 /* menuPage */
+#menuPage {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sub-title {
+  padding: 0.5rem;
+  align-self: center;
+}
+
+.menu-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(auto-fill, 35%);
+  justify-content: space-around;
+  align-content: space-around;
+}
+.menu-card {
+  border: 1px solid var(--white-clr);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  position: relative;
+}
+.menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu-desc {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  row-gap: 1rem;
+}
+.menu-desc > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--white-clr);
+}
