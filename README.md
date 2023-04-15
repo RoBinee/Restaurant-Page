@@ -2,7 +2,7 @@
 
 <a href="https://robinee.github.io/Restaurant-Page/">Demo</a>
 
-##I met so many problems
+## I met so many problems
 1. I did output.clean option for cleaning dist folder and it accidently removed index.html
   -> So I created index.html again but it doesn't work
 2. Therefore I tried to come back previous state but I didn't do it well
