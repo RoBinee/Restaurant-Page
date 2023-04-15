@@ -1,26 +1,17 @@
-//Home page
-//first make HTML structure of menu page
-
-// structure
-
-/* <div id="homePage">
-  <h1 class="title">Pelax Restaurant</h1>
-    <p class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-      voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem
-      ducimus nulla.
-    </p>
-</div> */
+import { createElement } from '../createElement.js';
 
 const homeContent = (function () {
-  return `<div id="homePage">
-  <h1 class="title">Pelax Restaurant</h1>
-    <p class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-      voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem
-      ducimus nulla.
-    </p>
-</div>`;
+  const homePage = createElement('div', undefined, undefined, 'homePage');
+  const text = {
+    title: 'Pelax Restaurant',
+    intro:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,voluptatum expedita tempore eaque at numquam. Sequi iste voluptatem ducimus nulla.',
+  };
+  const title = createElement('h1', 'title', text.title);
+  const intro = createElement('p', 'intro', text.intro);
+
+  homePage.append(title, intro);
+  return homePage;
 })();
 
 export { homeContent };
