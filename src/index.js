@@ -4,22 +4,27 @@ import { homeContent } from './pages/homePage.js';
 import { menuContent } from './pages/menuPage.js';
 import { aboutContent } from './pages/aboutPage.js';
 
-window.addEventListener('DOMContentLoaded', renderPage);
+window.addEventListener('DOMContentLoaded', () => {
+  renderPage();
 
-const container = document.querySelector('.container');
-const lists = document.querySelectorAll('li');
-lists.forEach((list) => {
-  list.addEventListener('click', (e) => {
+  const container = document.querySelector('.container');
+  const lists = document.querySelectorAll('li');
+
+  function changeContent(e) {
     const menu = e.currentTarget.textContent;
+    const oldChild = container.firstChild;
     if (menu === 'Home') {
-      container.removeChild(container.firstChild);
-      container.appendChild(homeContent);
+      container.replaceChild(homeContent, oldChild);
     } else if (menu === 'Menu') {
-      container.removeChild(container.firstChild);
-      container.appendChild(menuContent);
+      container.replaceChild(menuContent, oldChild);
     } else if (menu === 'About') {
-      container.removeChild(container.firstChild);
-      container.appendChild(aboutContent);
+      container.replaceChild(aboutContent, oldChild);
     }
+  }
+
+  lists.forEach((list) => {
+    list.addEventListener('click', (e) => {
+      changeContent(e);
+    });
   });
 });
