@@ -1,6 +1,6 @@
 import background from './images/background.jpg';
 import './style.css';
-import { loadHomePage } from './home.js';
+import { renderPage } from './home.js';
 import { homeContent } from './pages/homePage.js';
 import { menuContent } from './pages/menuPage.js';
 import { aboutContent } from './pages/aboutPage.js';
@@ -9,7 +9,7 @@ import { aboutContent } from './pages/aboutPage.js';
  * write this initial page-load function inside of its own module and then import and call it inside of index.js.
  */
 
-loadHomePage();
+renderPage();
 
 const container = document.querySelector('.container');
 //insert menu content into container
