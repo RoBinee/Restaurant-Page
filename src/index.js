@@ -5,6 +5,7 @@ import { menuContent } from './pages/menuPage.js';
 import { aboutContent } from './pages/aboutPage.js';
 
 window.addEventListener('DOMContentLoaded', () => {
+  //call renderPage at the top to declare container and lists variables
   renderPage();
 
   const container = document.querySelector('.container');
