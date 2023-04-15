@@ -1,6 +1,6 @@
-import { nav } from './nav.js';
-import { header } from './header.js';
-import { footer } from './footer.js';
+import { nav } from './components/nav.js';
+import { header } from './components/header.js';
+import { footer } from './components/footer.js';
 
 function renderPage() {
   const content = document.getElementById('content');
