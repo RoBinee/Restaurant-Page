@@ -13,7 +13,6 @@ const aboutContent = (function () {
   const p = createElement('p', undefined, text.longLorem);
 
   aboutPage.append(subTitle, h3, p);
-  console.log(aboutPage);
 
   return aboutPage;
 })();
