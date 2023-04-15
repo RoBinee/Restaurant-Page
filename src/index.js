@@ -13,12 +13,16 @@ window.addEventListener('DOMContentLoaded', () => {
   function changeContent(e) {
     const menu = e.currentTarget.textContent;
     const oldChild = container.firstChild;
-    if (menu === 'Home') {
-      container.replaceChild(homeContent, oldChild);
-    } else if (menu === 'Menu') {
-      container.replaceChild(menuContent, oldChild);
-    } else if (menu === 'About') {
-      container.replaceChild(aboutContent, oldChild);
+    switch (menu) {
+      case 'Home':
+        container.replaceChild(homeContent, oldChild);
+        break;
+      case 'Menu':
+        container.replaceChild(menuContent, oldChild);
+        break;
+      case 'About':
+        container.replaceChild(aboutContent, oldChild);
+        break;
     }
   }
 
