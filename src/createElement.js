@@ -1,7 +1,7 @@
 export function createElement(type, className, text, id) {
   const newElement = document.createElement(type);
 
-  if (className || text) {
+  if (className || text || id) {
     //if there is a need to set class or text
     if (className) newElement.classList.add(className);
     if (text) newElement.textContent = text;
